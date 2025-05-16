@@ -11,8 +11,11 @@
 
   <script>
     document.getElementById("enterBtn").addEventListener("click", function() {
-      const statusParagraph = document.getElementById("status");
-      statusParagraph.outerHTML = '<h1 id="status">Entered Metaverse</h1>';
+      const p = document.getElementById("status");
+      const h1 = document.createElement("h1");
+      h1.id = "status"; // Maintain the same ID
+      h1.textContent = "Entered Metaverse";
+      p.replaceWith(h1); // Replace <p> with <h1>
     });
   </script>
 
